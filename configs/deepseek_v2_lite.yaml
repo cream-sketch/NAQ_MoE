@@ -1,0 +1,24 @@
+model:
+  repo: deepseek-ai/DeepSeek-V2-Lite
+  hidden_size: 2048
+  moe_intermediate_size: 1408
+  n_routed_experts: 64
+  first_moe_layer: 1
+  last_moe_layer: 26
+
+experiment:
+  # Pilot defaults. Increase tokens/layers for production runs.
+  layers: [5]
+  calibration_tokens: 512
+  calibration_source: random_hidden
+  seed: 0
+  budgets: [0.08, 0.12, 0.18]
+  group_count: 4
+  tier_method: data_driven
+  max_cluster_threshold: 32
+  cluster_similarity_threshold: 0.5
+  activation_batch_tokens: 128
+  distance_slot_chunk: 64
+
+paths:
+  output_dir: outputs

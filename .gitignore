@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Large experiment outputs
+outputs*/
+offload*/
+data/
+checkpoints/
+models/
+*.pt
+*.pth
+*.npy
+*.npz
+*.safetensors
+*.bin
+*.pkl
+*.ckpt
+*.onnx
+*.tar
+*.tar.gz
+*.zip
+*.gz
+
+# Logs and local state
+*.log
+*.partial.json
+.env
+.env.*
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,62 @@
+{
+  "model_repo": "deepseek-ai/DeepSeek-V2-Lite",
+  "budget": "0.12",
+  "layers": [
+    1,
+    5,
+    13,
+    26
+  ],
+  "method": "mean max cosine to any shared-expert SwiGLU intermediate neuron signature",
+  "overall": {
+    "universal_centroid_vs_shared": 0.7649805436440564,
+    "universal_expert_neuron_vs_shared": 0.5374413635752616,
+    "specialist_expert_neuron_vs_shared": 0.29697496367415893
+  },
+  "per_layer": {
+    "1": {
+      "universal_slots": 231,
+      "specialist_slots": 587,
+      "shared_neurons": 2816,
+      "universal_centroid_vs_shared_mean_max_cos": 0.7939627511160714,
+      "universal_expert_neuron_vs_shared_mean_max_cos": 0.5962415814915777,
+      "specialist_expert_neuron_vs_shared_mean_max_cos": 0.3333570209841103,
+      "universal_centroid_vectors": 231,
+      "universal_expert_vectors": 14784,
+      "specialist_expert_vectors": 37568
+    },
+    "5": {
+      "universal_slots": 215,
+      "specialist_slots": 586,
+      "shared_neurons": 2816,
+      "universal_centroid_vs_shared_mean_max_cos": 0.7071224478788154,
+      "universal_expert_neuron_vs_shared_mean_max_cos": 0.4607116211292356,
+      "specialist_expert_neuron_vs_shared_mean_max_cos": 0.2704559019401212,
+      "universal_centroid_vectors": 215,
+      "universal_expert_vectors": 13760,
+      "specialist_expert_vectors": 37504
+    },
+    "13": {
+      "universal_slots": 242,
+      "specialist_slots": 588,
+      "shared_neurons": 2816,
+      "universal_centroid_vs_shared_mean_max_cos": 0.8079624648921746,
+      "universal_expert_neuron_vs_shared_mean_max_cos": 0.5745300773746711,
+      "specialist_expert_neuron_vs_shared_mean_max_cos": 0.3017661786403786,
+      "universal_centroid_vectors": 242,
+      "universal_expert_vectors": 15488,
+      "specialist_expert_vectors": 37632
+    },
+    "26": {
+      "universal_slots": 184,
+      "specialist_slots": 584,
+      "shared_neurons": 2816,
+      "universal_centroid_vs_shared_mean_max_cos": 0.7396706290867018,
+      "universal_expert_neuron_vs_shared_mean_max_cos": 0.5044988393783569,
+      "specialist_expert_neuron_vs_shared_mean_max_cos": 0.28219186116571293,
+      "universal_centroid_vectors": 184,
+      "universal_expert_vectors": 11776,
+      "specialist_expert_vectors": 37376
+    }
+  }
+}

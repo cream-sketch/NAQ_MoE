@@ -1,0 +1,175 @@
+{
+  "repo": "deepseek-ai/DeepSeek-V2-Lite",
+  "layers": [
+    1,
+    5,
+    13,
+    26
+  ],
+  "reconstruct": "fallback_bf16",
+  "ppl_dataset_requested": "local",
+  "ppl_dataset_used": "local_docs",
+  "dataset_errors": [],
+  "eval_tokens_requested": 512,
+  "seq_len": 256,
+  "gpu_binding": "3",
+  "dense_baseline": {
+    "ppl": 132327.54205064834,
+    "mean_nll": 11.793035507202148,
+    "tokens": 510
+  },
+  "uniform_int4_allexpert": null,
+  "fans_moe": {
+    "0.08": {
+      "ppl": {
+        "ppl": 130589.33263335776,
+        "mean_nll": 11.779812812805176,
+        "tokens": 510
+      },
+      "layers": [
+        {
+          "layer": 1,
+          "budget": 0.08,
+          "counts": {
+            "universal": 231,
+            "group": 847,
+            "specialist": 330
+          },
+          "actual_storage_ratio": 0.0799560546875
+        },
+        {
+          "layer": 5,
+          "budget": 0.08,
+          "counts": {
+            "universal": 215,
+            "group": 864,
+            "specialist": 329
+          },
+          "actual_storage_ratio": 0.07997824928977273
+        },
+        {
+          "layer": 13,
+          "budget": 0.08,
+          "counts": {
+            "universal": 242,
+            "group": 835,
+            "specialist": 331
+          },
+          "actual_storage_ratio": 0.07998934659090909
+        },
+        {
+          "layer": 26,
+          "budget": 0.08,
+          "counts": {
+            "universal": 184,
+            "group": 898,
+            "specialist": 326
+          },
+          "actual_storage_ratio": 0.07985617897727273
+        }
+      ]
+    },
+    "0.12": {
+      "ppl": {
+        "ppl": 131001.46073193541,
+        "mean_nll": 11.782963752746582,
+        "tokens": 510
+      },
+      "layers": [
+        {
+          "layer": 1,
+          "budget": 0.12,
+          "counts": {
+            "universal": 231,
+            "group": 590,
+            "specialist": 587
+          },
+          "actual_storage_ratio": 0.11988414417613637
+        },
+        {
+          "layer": 5,
+          "budget": 0.12,
+          "counts": {
+            "universal": 215,
+            "group": 607,
+            "specialist": 586
+          },
+          "actual_storage_ratio": 0.11990633877840909
+        },
+        {
+          "layer": 13,
+          "budget": 0.12,
+          "counts": {
+            "universal": 242,
+            "group": 578,
+            "specialist": 588
+          },
+          "actual_storage_ratio": 0.11991743607954546
+        },
+        {
+          "layer": 26,
+          "budget": 0.12,
+          "counts": {
+            "universal": 184,
+            "group": 640,
+            "specialist": 584
+          },
+          "actual_storage_ratio": 0.11993963068181819
+        }
+      ]
+    },
+    "0.18": {
+      "ppl": {
+        "ppl": 130229.16327794814,
+        "mean_nll": 11.777050971984863,
+        "tokens": 510
+      },
+      "layers": [
+        {
+          "layer": 1,
+          "budget": 0.18,
+          "counts": {
+            "universal": 231,
+            "group": 484,
+            "specialist": 693
+          },
+          "actual_storage_ratio": 0.1363525390625
+        },
+        {
+          "layer": 5,
+          "budget": 0.18,
+          "counts": {
+            "universal": 215,
+            "group": 502,
+            "specialist": 691
+          },
+          "actual_storage_ratio": 0.13621937144886365
+        },
+        {
+          "layer": 13,
+          "budget": 0.18,
+          "counts": {
+            "universal": 242,
+            "group": 482,
+            "specialist": 684
+          },
+          "actual_storage_ratio": 0.13483220880681818
+        },
+        {
+          "layer": 26,
+          "budget": 0.18,
+          "counts": {
+            "universal": 184,
+            "group": 475,
+            "specialist": 749
+          },
+          "actual_storage_ratio": 0.14557439630681818
+        }
+      ]
+    }
+  },
+  "notes": [
+    "PPL is measured after BF16 reconstruction in the ordinary model forward path.",
+    "Compression is applied to the selected representative layers listed in `layers`."
+  ]
+}

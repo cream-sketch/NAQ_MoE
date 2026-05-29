@@ -1,0 +1,283 @@
+{
+  "repo": "deepseek-ai/DeepSeek-V2-Lite",
+  "layers": [
+    1,
+    5,
+    13,
+    26
+  ],
+  "reconstruct": "fallback_bf16",
+  "ppl_dataset_requested": "wikitext-2-raw-v1",
+  "ppl_dataset_used": "wikitext-2-raw-v1",
+  "dataset_errors": [],
+  "eval_tokens_requested": 20000,
+  "max_length": 2048,
+  "stride": 1024,
+  "gpu_binding": "0,1",
+  "max_memory": {
+    "0": 32212254720,
+    "1": 32212254720
+  },
+  "device_map": {
+    "available": true,
+    "counts": {
+      "0": 14,
+      "1": 16
+    },
+    "raw": {
+      "model.embed_tokens": "0",
+      "model.layers.0": "0",
+      "model.layers.1": "0",
+      "model.layers.2": "0",
+      "model.layers.3": "0",
+      "model.layers.4": "0",
+      "model.layers.5": "0",
+      "model.layers.6": "0",
+      "model.layers.7": "0",
+      "model.layers.8": "0",
+      "model.layers.9": "0",
+      "model.layers.10": "0",
+      "model.layers.11": "0",
+      "model.layers.12": "0",
+      "model.layers.13": "1",
+      "model.layers.14": "1",
+      "model.layers.15": "1",
+      "model.layers.16": "1",
+      "model.layers.17": "1",
+      "model.layers.18": "1",
+      "model.layers.19": "1",
+      "model.layers.20": "1",
+      "model.layers.21": "1",
+      "model.layers.22": "1",
+      "model.layers.23": "1",
+      "model.layers.24": "1",
+      "model.layers.25": "1",
+      "model.layers.26": "1",
+      "model.norm": "1",
+      "lm_head": "1"
+    }
+  },
+  "force_safetensors_reload": {
+    "snapshot_dir": "/home/ial-lvyx/.cache/huggingface/hub/models--deepseek-ai--DeepSeek-V2-Lite/snapshots/604d5664dddd88a0433dbae533b7fe9472482de0",
+    "shards": [
+      "model-00001-of-000004.safetensors",
+      "model-00002-of-000004.safetensors",
+      "model-00003-of-000004.safetensors",
+      "model-00004-of-000004.safetensors"
+    ],
+    "copied_tensors": 5291,
+    "missing_targets_count": 0,
+    "missing_targets_first20": []
+  },
+  "cuda_memory_after_load": {
+    "0": {
+      "allocated_gib": 14.121699810028076,
+      "reserved_gib": 14.126953125,
+      "max_allocated_gib": 14.512324810028076,
+      "max_reserved_gib": 14.517578125
+    },
+    "1": {
+      "allocated_gib": 16.188607215881348,
+      "reserved_gib": 16.193359375,
+      "max_allocated_gib": 16.579232215881348,
+      "max_reserved_gib": 16.583984375
+    }
+  },
+  "dense_baseline": {
+    "ppl": 5.349129333713862,
+    "mean_nll": 1.676933806302208,
+    "tokens": 19999,
+    "tokens_available": 308191,
+    "tokens_used": 20000,
+    "max_length": 2048,
+    "stride": 1024
+  },
+  "uniform_int4_allexpert": {
+    "ppl": 5.55113821734876,
+    "mean_nll": 1.7140029909384358,
+    "tokens": 19999,
+    "tokens_available": 308191,
+    "tokens_used": 20000,
+    "max_length": 2048,
+    "stride": 1024
+  },
+  "fans_moe": {
+    "0.08": {
+      "ppl": {
+        "ppl": 5.993188885557594,
+        "mean_nll": 1.7906236386762882,
+        "tokens": 19999,
+        "tokens_available": 308191,
+        "tokens_used": 20000,
+        "max_length": 2048,
+        "stride": 1024
+      },
+      "layers": [
+        {
+          "layer": 1,
+          "budget": 0.08,
+          "counts": {
+            "universal": 231,
+            "group": 847,
+            "specialist": 330
+          },
+          "actual_storage_ratio": 0.0799560546875
+        },
+        {
+          "layer": 5,
+          "budget": 0.08,
+          "counts": {
+            "universal": 215,
+            "group": 864,
+            "specialist": 329
+          },
+          "actual_storage_ratio": 0.07997824928977273
+        },
+        {
+          "layer": 13,
+          "budget": 0.08,
+          "counts": {
+            "universal": 242,
+            "group": 835,
+            "specialist": 331
+          },
+          "actual_storage_ratio": 0.07998934659090909
+        },
+        {
+          "layer": 26,
+          "budget": 0.08,
+          "counts": {
+            "universal": 184,
+            "group": 898,
+            "specialist": 326
+          },
+          "actual_storage_ratio": 0.07985617897727273
+        }
+      ]
+    },
+    "0.12": {
+      "ppl": {
+        "ppl": 5.812276568169919,
+        "mean_nll": 1.7599723302898982,
+        "tokens": 19999,
+        "tokens_available": 308191,
+        "tokens_used": 20000,
+        "max_length": 2048,
+        "stride": 1024
+      },
+      "layers": [
+        {
+          "layer": 1,
+          "budget": 0.12,
+          "counts": {
+            "universal": 231,
+            "group": 590,
+            "specialist": 587
+          },
+          "actual_storage_ratio": 0.11988414417613637
+        },
+        {
+          "layer": 5,
+          "budget": 0.12,
+          "counts": {
+            "universal": 215,
+            "group": 607,
+            "specialist": 586
+          },
+          "actual_storage_ratio": 0.11990633877840909
+        },
+        {
+          "layer": 13,
+          "budget": 0.12,
+          "counts": {
+            "universal": 242,
+            "group": 578,
+            "specialist": 588
+          },
+          "actual_storage_ratio": 0.11991743607954546
+        },
+        {
+          "layer": 26,
+          "budget": 0.12,
+          "counts": {
+            "universal": 184,
+            "group": 640,
+            "specialist": 584
+          },
+          "actual_storage_ratio": 0.11993963068181819
+        }
+      ]
+    },
+    "0.18": {
+      "ppl": {
+        "ppl": 5.7356539362775285,
+        "mean_nll": 1.746701769587028,
+        "tokens": 19999,
+        "tokens_available": 308191,
+        "tokens_used": 20000,
+        "max_length": 2048,
+        "stride": 1024
+      },
+      "layers": [
+        {
+          "layer": 1,
+          "budget": 0.18,
+          "counts": {
+            "universal": 231,
+            "group": 484,
+            "specialist": 693
+          },
+          "actual_storage_ratio": 0.1363525390625
+        },
+        {
+          "layer": 5,
+          "budget": 0.18,
+          "counts": {
+            "universal": 215,
+            "group": 502,
+            "specialist": 691
+          },
+          "actual_storage_ratio": 0.13621937144886365
+        },
+        {
+          "layer": 13,
+          "budget": 0.18,
+          "counts": {
+            "universal": 242,
+            "group": 482,
+            "specialist": 684
+          },
+          "actual_storage_ratio": 0.13483220880681818
+        },
+        {
+          "layer": 26,
+          "budget": 0.18,
+          "counts": {
+            "universal": 184,
+            "group": 475,
+            "specialist": 749
+          },
+          "actual_storage_ratio": 0.14557439630681818
+        }
+      ]
+    }
+  },
+  "notes": [
+    "PPL is measured after BF16 reconstruction in the ordinary model forward path.",
+    "Compression is applied to the selected representative layers listed in `layers`."
+  ],
+  "cuda_memory_final": {
+    "0": {
+      "allocated_gib": 13.628169536590576,
+      "reserved_gib": 16.08984375,
+      "max_allocated_gib": 15.190701007843018,
+      "max_reserved_gib": 16.583984375
+    },
+    "1": {
+      "allocated_gib": 15.656502723693848,
+      "reserved_gib": 18.751953125,
+      "max_allocated_gib": 17.226831436157227,
+      "max_reserved_gib": 19.03515625
+    }
+  }
+}

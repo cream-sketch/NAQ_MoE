@@ -1,0 +1,10 @@
+accelerate
+datasets
+huggingface_hub
+numpy
+pyyaml
+safetensors
+scikit-learn
+torch
+transformers
+

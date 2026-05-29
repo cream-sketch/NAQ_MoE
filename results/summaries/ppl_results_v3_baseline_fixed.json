@@ -1,0 +1,401 @@
+{
+  "model": "deepseek-ai/DeepSeek-V2-Lite",
+  "eval_dataset": "wikitext-2-raw-v1",
+  "deepseek_eval_tokens_available": 308191,
+  "cuda_visible_devices": "0,1",
+  "max_memory_per_gpu": "30GiB",
+  "gpt2_sanity": {
+    "ppl": 25.29051160469329,
+    "mean_nll": 3.2304292900024985,
+    "tokens_scored": 19999,
+    "tokens_available": 286177,
+    "tokens_used": 20000,
+    "max_length": 1024,
+    "stride": 512
+  },
+  "dense_baseline": {
+    "ppl": 5.349129333713862,
+    "mean_nll": 1.676933806302208,
+    "tokens_scored": 19999,
+    "tokens_available": 308191,
+    "tokens_used": 20000,
+    "max_length": 2048,
+    "stride": 1024
+  },
+  "device_map": {
+    "available": true,
+    "counts": {
+      "0": 14,
+      "1": 16
+    },
+    "raw": {
+      "model.embed_tokens": "0",
+      "model.layers.0": "0",
+      "model.layers.1": "0",
+      "model.layers.2": "0",
+      "model.layers.3": "0",
+      "model.layers.4": "0",
+      "model.layers.5": "0",
+      "model.layers.6": "0",
+      "model.layers.7": "0",
+      "model.layers.8": "0",
+      "model.layers.9": "0",
+      "model.layers.10": "0",
+      "model.layers.11": "0",
+      "model.layers.12": "0",
+      "model.layers.13": "1",
+      "model.layers.14": "1",
+      "model.layers.15": "1",
+      "model.layers.16": "1",
+      "model.layers.17": "1",
+      "model.layers.18": "1",
+      "model.layers.19": "1",
+      "model.layers.20": "1",
+      "model.layers.21": "1",
+      "model.layers.22": "1",
+      "model.layers.23": "1",
+      "model.layers.24": "1",
+      "model.layers.25": "1",
+      "model.layers.26": "1",
+      "model.norm": "1",
+      "lm_head": "1"
+    }
+  },
+  "weight_stats_before_reload": {
+    "model.embed_tokens.weight": {
+      "model": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": 2.0125123683101265e-06,
+        "std": 0.02000022865831852,
+        "min": -0.1171875,
+        "max": 0.11767578125
+      },
+      "checkpoint": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": -0.0005161297740414739,
+        "std": 0.1315276175737381,
+        "min": -2.046875,
+        "max": 1.6640625
+      },
+      "std_ratio_model_over_checkpoint": 0.1520610578010799
+    },
+    "lm_head.weight": {
+      "model": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": -1.143304686479496e-07,
+        "std": 0.019998399540781975,
+        "min": -0.125,
+        "max": 0.111328125
+      },
+      "checkpoint": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": 0.0003517117293085903,
+        "std": 0.1508045494556427,
+        "min": -2.0625,
+        "max": 3.78125
+      },
+      "std_ratio_model_over_checkpoint": 0.13261138084341584
+    },
+    "model.layers.0.self_attn.q_proj.weight": {
+      "model": {
+        "shape": [
+          3072,
+          2048
+        ],
+        "mean": 4.6620366447314154e-06,
+        "std": 0.020003492012619972,
+        "min": -0.10400390625,
+        "max": 0.09912109375
+      },
+      "checkpoint": {
+        "shape": [
+          3072,
+          2048
+        ],
+        "mean": 5.711910034733592e-06,
+        "std": 0.029958853498101234,
+        "min": -0.34375,
+        "max": 0.310546875
+      },
+      "std_ratio_model_over_checkpoint": 0.6676988494866058
+    },
+    "model.layers.1.mlp.gate.weight": {
+      "model": {
+        "shape": [
+          64,
+          2048
+        ],
+        "mean": -7.225314766401425e-05,
+        "std": 0.03426054120063782,
+        "min": -0.7421875,
+        "max": 0.56640625
+      },
+      "checkpoint": {
+        "shape": [
+          64,
+          2048
+        ],
+        "mean": -7.225314766401425e-05,
+        "std": 0.03426054120063782,
+        "min": -0.7421875,
+        "max": 0.56640625
+      },
+      "std_ratio_model_over_checkpoint": 1.0
+    },
+    "model.layers.1.mlp.experts.0.gate_proj.weight": {
+      "model": {
+        "shape": [
+          1408,
+          2048
+        ],
+        "mean": 3.1177767141343793e-06,
+        "std": 0.020010199397802353,
+        "min": -0.1064453125,
+        "max": 0.1025390625
+      },
+      "checkpoint": {
+        "shape": [
+          1408,
+          2048
+        ],
+        "mean": 7.551520411652746e-06,
+        "std": 0.026154423132538795,
+        "min": -0.1748046875,
+        "max": 0.1640625
+      },
+      "std_ratio_model_over_checkpoint": 0.7650789809585823
+    }
+  },
+  "force_safetensors_reload": {
+    "snapshot_dir": "/home/ial-lvyx/.cache/huggingface/hub/models--deepseek-ai--DeepSeek-V2-Lite/snapshots/604d5664dddd88a0433dbae533b7fe9472482de0",
+    "shards": [
+      "model-00001-of-000004.safetensors",
+      "model-00002-of-000004.safetensors",
+      "model-00003-of-000004.safetensors",
+      "model-00004-of-000004.safetensors"
+    ],
+    "copied_tensors": 5291,
+    "missing_targets_count": 0,
+    "missing_targets_first20": []
+  },
+  "weight_stats_after_reload": {
+    "model.embed_tokens.weight": {
+      "model": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": -0.0005161297740414739,
+        "std": 0.1315276175737381,
+        "min": -2.046875,
+        "max": 1.6640625
+      },
+      "checkpoint": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": -0.0005161297740414739,
+        "std": 0.1315276175737381,
+        "min": -2.046875,
+        "max": 1.6640625
+      },
+      "std_ratio_model_over_checkpoint": 1.0
+    },
+    "lm_head.weight": {
+      "model": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": 0.0003517117293085903,
+        "std": 0.1508045494556427,
+        "min": -2.0625,
+        "max": 3.78125
+      },
+      "checkpoint": {
+        "shape": [
+          102400,
+          2048
+        ],
+        "mean": 0.0003517117293085903,
+        "std": 0.1508045494556427,
+        "min": -2.0625,
+        "max": 3.78125
+      },
+      "std_ratio_model_over_checkpoint": 1.0
+    },
+    "model.layers.0.self_attn.q_proj.weight": {
+      "model": {
+        "shape": [
+          3072,
+          2048
+        ],
+        "mean": 5.711910034733592e-06,
+        "std": 0.029958853498101234,
+        "min": -0.34375,
+        "max": 0.310546875
+      },
+      "checkpoint": {
+        "shape": [
+          3072,
+          2048
+        ],
+        "mean": 5.711910034733592e-06,
+        "std": 0.029958853498101234,
+        "min": -0.34375,
+        "max": 0.310546875
+      },
+      "std_ratio_model_over_checkpoint": 1.0
+    },
+    "model.layers.1.mlp.gate.weight": {
+      "model": {
+        "shape": [
+          64,
+          2048
+        ],
+        "mean": -7.225314766401425e-05,
+        "std": 0.03426054120063782,
+        "min": -0.7421875,
+        "max": 0.56640625
+      },
+      "checkpoint": {
+        "shape": [
+          64,
+          2048
+        ],
+        "mean": -7.225314766401425e-05,
+        "std": 0.03426054120063782,
+        "min": -0.7421875,
+        "max": 0.56640625
+      },
+      "std_ratio_model_over_checkpoint": 1.0
+    },
+    "model.layers.1.mlp.experts.0.gate_proj.weight": {
+      "model": {
+        "shape": [
+          1408,
+          2048
+        ],
+        "mean": 7.551520411652746e-06,
+        "std": 0.026154423132538795,
+        "min": -0.1748046875,
+        "max": 0.1640625
+      },
+      "checkpoint": {
+        "shape": [
+          1408,
+          2048
+        ],
+        "mean": 7.551520411652746e-06,
+        "std": 0.026154423132538795,
+        "min": -0.1748046875,
+        "max": 0.1640625
+      },
+      "std_ratio_model_over_checkpoint": 1.0
+    }
+  },
+  "cuda_memory": {
+    "after_load": {
+      "0": {
+        "allocated_gib": 14.131709575653076,
+        "reserved_gib": 14.916015625,
+        "max_allocated_gib": 14.912959575653076,
+        "max_reserved_gib": 14.916015625
+      },
+      "1": {
+        "allocated_gib": 16.188607215881348,
+        "reserved_gib": 16.974609375,
+        "max_allocated_gib": 16.969857215881348,
+        "max_reserved_gib": 16.974609375
+      }
+    },
+    "after_dense_eval": {
+      "0": {
+        "allocated_gib": 13.630244731903076,
+        "reserved_gib": 16.50390625,
+        "max_allocated_gib": 15.192776203155518,
+        "max_reserved_gib": 16.50390625
+      },
+      "1": {
+        "allocated_gib": 15.656502723693848,
+        "reserved_gib": 18.58984375,
+        "max_allocated_gib": 17.226831436157227,
+        "max_reserved_gib": 18.58984375
+      }
+    }
+  },
+  "passed_dense_guard": true,
+  "next_token_probe": {
+    "prompt": "The capital of France is",
+    "logits_mean": 2.28340220451355,
+    "logits_std": 4.860823154449463,
+    "logits_min": -26.625,
+    "logits_max": 23.25,
+    "entropy": 2.330142021179199,
+    "top10": [
+      {
+        "id": 8913,
+        "prob": 0.656852662563324,
+        "text": " Paris"
+      },
+      {
+        "id": 254,
+        "prob": 0.04758225008845329,
+        "text": " the"
+      },
+      {
+        "id": 245,
+        "prob": 0.041991185396909714,
+        "text": " a"
+      },
+      {
+        "id": 839,
+        "prob": 0.01363254152238369,
+        "text": " also"
+      },
+      {
+        "id": 634,
+        "prob": 0.01363254152238369,
+        "text": " one"
+      },
+      {
+        "id": 6286,
+        "prob": 0.012030676007270813,
+        "text": " located"
+      },
+      {
+        "id": 441,
+        "prob": 0.010617034509778023,
+        "text": " not"
+      },
+      {
+        "id": 3185,
+        "prob": 0.00936949998140335,
+        "text": " known"
+      },
+      {
+        "id": 274,
+        "prob": 0.007296973839402199,
+        "text": " an"
+      },
+      {
+        "id": 279,
+        "prob": 0.007296973839402199,
+        "text": " in"
+      }
+    ]
+  }
+}
